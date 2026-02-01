@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9ED16FC8-004A-47B5-B556-65EE44DEE523}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\cortracker projects\\hrms_git\\hrms_dev_api\\businesslayer\\implementations\\missedpunchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E251F59-A28C-42A9-B86A-064FB6948BC5}|HRMS_Backend.csproj|d:\\cortracker projects\\hrms_git\\hrms_dev_api\\hrms_backend\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E251F59-A28C-42A9-B86A-064FB6948BC5}|HRMS_Backend.csproj|solutionrelative:controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59D02645-05B5-4934-B2D9-9563DF03B383}|..\\DataAccessLayer\\DataAccessLayer.csproj|d:\\cortracker projects\\hrms_git\\hrms_dev_api\\dataaccesslayer\\dbcontext\\hrmscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59D02645-05B5-4934-B2D9-9563DF03B383}|..\\DataAccessLayer\\DataAccessLayer.csproj|d:\\cortracker projects\\hrms_git\\hrms_dev_api\\dataaccesslayer\\dbcontext\\missedpunchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E251F59-A28C-42A9-B86A-064FB6948BC5}|HRMS_Backend.csproj|d:\\cortracker projects\\hrms_git\\hrms_dev_api\\hrms_backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8E251F59-A28C-42A9-B86A-064FB6948BC5}|HRMS_Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E251F59-A28C-42A9-B86A-064FB6948BC5}|HRMS_Backend.csproj|d:\\cortracker projects\\hrms_git\\hrms_dev_api\\hrms_backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E251F59-A28C-42A9-B86A-064FB6948BC5}|HRMS_Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MissedPunchService.cs",
+              "DocumentMoniker": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\BusinessLayer\\Implementations\\MissedPunchService.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\Implementations\\MissedPunchService.cs",
+              "ToolTip": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\BusinessLayer\\Implementations\\MissedPunchService.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\Implementations\\MissedPunchService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAWwEMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T11:39:49.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MissedPunchRequest.cs",
+              "DocumentMoniker": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\DataAccessLayer\\DBContext\\MissedPunchRequest.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\DBContext\\MissedPunchRequest.cs",
+              "ToolTip": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\DataAccessLayer\\DBContext\\MissedPunchRequest.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\DBContext\\MissedPunchRequest.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIA3wA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T11:16:26.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HRMSContext.cs",
+              "DocumentMoniker": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\DataAccessLayer\\DBContext\\HRMSContext.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\DBContext\\HRMSContext.cs",
+              "ToolTip": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\DataAccessLayer\\DBContext\\HRMSContext.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\DBContext\\HRMSContext.cs",
+              "ViewState": "AgIAAJcIAAAAAAAAAAAjwJoIAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T11:12:44.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-30T11:11:12.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
+              "ToolTip": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAADgvyEBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T11:05:29.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Cortracker projects\\HRMS_GIT\\HRMS_Dev_API\\HRMS_Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T11:03:21.143Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
