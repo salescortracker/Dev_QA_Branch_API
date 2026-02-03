@@ -14,6 +14,6 @@ namespace BusinessLayer.Interfaces
         /// <param name="to">Recipient email address</param>
         /// <param name="subject">Email subject</param>
         /// <param name="htmlBody">HTML body content</param>
-        Task SendEmailAsync(string to, string subject, string htmlBody);
+        Task SendEmailAsync(string to, string subject, string htmlBody, List<string>? ccEmails = null);
     }
 }

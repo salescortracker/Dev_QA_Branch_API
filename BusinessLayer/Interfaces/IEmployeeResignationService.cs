@@ -23,15 +23,21 @@ namespace BusinessLayer.Interfaces
         Task<EmployeeResignationDto> AddResignationAsync(EmployeeResignationDto dto);
         Task<EmployeeResignationDto> UpdateResignationAsync(int id, EmployeeResignationDto dto);
         Task<bool> DeleteResignationAsync(int id, int companyId, int regionId);
+        Task<IEnumerable<EmployeeResignationDto>> GetResignationsForReportingManagerAsync(int managerUserId);
+
         Task<bool> UpdateResignationStatusAsync(
             int resignationId,
-            int companyId,
-            int regionId,
             string status,
-            bool isManagerApprove = false,
-            bool isManagerReject = false,
-            bool isHRApprove = false,
-            bool isHRReject = false
-            );
+            string? managerReason,
+            bool isManagerApprove,
+            bool isManagerReject,
+                string? hrReason = null,
+    bool isHRApprove = false,
+    bool isHRReject = false
+        );
+
+
+        Task<IEnumerable<EmployeeResignationDto>> GetResignationsForHRAsync(int companyId, int regionId);
+
     }
 }
