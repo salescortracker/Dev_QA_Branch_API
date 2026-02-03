@@ -34,7 +34,7 @@ namespace BusinessLayer.Implementations
             };
         }
 
-        public async Task SendEmailAsync(string to, string subject, string htmlBody)
+        public async Task SendEmailAsync(string to, string subject, string htmlBody, List<string>? ccEmails = null)
         {
             using var smtpClient = CreateSmtpClient();
 
@@ -47,6 +47,14 @@ namespace BusinessLayer.Implementations
             };
 
             mailMessage.To.Add(to);
+            if (ccEmails != null)
+            {
+                foreach (var cc in ccEmails)
+                {
+                    if (!string.IsNullOrWhiteSpace(cc))
+                        mailMessage.CC.Add(cc);
+                }
+            }
 
             await smtpClient.SendMailAsync(mailMessage);
         }

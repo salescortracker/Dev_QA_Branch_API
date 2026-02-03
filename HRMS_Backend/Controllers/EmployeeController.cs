@@ -137,37 +137,52 @@ namespace HRMS_Backend.Controllers
 
         #endregion
 
-          [HttpPut("status/update")]
-    public async Task<IActionResult> UpdateStatus([FromBody] UpdateResignationStatusRequest request)
-    {
-        var result = await _resignationService.UpdateResignationStatusAsync(
-            request.ResignationId,
-            request.CompanyId,
-            request.RegionId,
-            request.Status,
-            request.IsManagerApprove,
-            request.IsManagerReject,
-            request.IsHRApprove,
-            request.IsHRReject
-        );
+        [HttpGet("GetResignationsForManager")]
+        public async Task<IActionResult> GetResignationsForManager(int managerUserId)
+        {
+            var data = await _resignationService
+                .GetResignationsForReportingManagerAsync(managerUserId);
 
-        if (!result) return NotFound(new { message = "Resignation not found or invalid access" });
-        return Ok(new { message = "Status updated successfully" });
-    }
+            return Ok(data);
+        }
 
 
-public class UpdateResignationStatusRequest
-{
-    public int ResignationId { get; set; }
-    public int CompanyId { get; set; }
-    public int RegionId { get; set; }
-    public string Status { get; set; }
-    public bool IsManagerApprove { get; set; }
-    public bool IsManagerReject { get; set; }
-    public bool IsHRApprove { get; set; }
-    public bool IsHRReject { get; set; }
-}
 
+        [HttpPut("UpdateResignationStatus")]
+        public async Task<IActionResult> UpdateResignationStatus([FromBody] UpdateResignationStatusRequest request)
+        {
+            var result = await _resignationService.UpdateResignationStatusAsync(
+                request.ResignationId,
+                request.Status,
+                request.ManagerReason,
+                request.IsManagerApprove,
+                request.IsManagerReject,
+                request.HRReason,
+    request.IsHRApprove,
+    request.IsHRReject);
+
+            if (!result)
+                return NotFound("Invalid resignation");
+
+            return Ok(new
+            {
+                success = true,
+                status = request.Status
+            });
+
+        }
+        [HttpGet("GetResignationsForHR")]
+        public async Task<IActionResult> GetResignationsForHR(int companyId, int regionId)
+        {
+            var data = await _resignationService
+                .GetResignationsForHRAsync(companyId, regionId);
+
+            return Ok(data);
+        }
+
+
+       
+    
         #endregion
         #region Employee Job History,Education,Certification Details
         /// <summary>

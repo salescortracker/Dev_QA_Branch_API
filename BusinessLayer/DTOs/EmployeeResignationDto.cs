@@ -37,5 +37,12 @@ namespace BusinessLayer.DTOs
         public int? UserId { get; set; }
 
         public int? RoleId { get; set; }
+        public string? ManagerReason { get; set; }
+        public DateTime? ManagerApprovedDate { get; set; }
+        public DateTime? ManagerRejectedDate { get; set; }
+        public string? HRReason { get; set; }
+        public DateTime? HRApprovedDate { get; set; }
+        public DateTime? HRRejectedDate { get; set; }
+
     }
 }
