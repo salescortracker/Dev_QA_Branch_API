@@ -1,4 +1,4 @@
-﻿using BusinessLayer.DTOs;
+using BusinessLayer.DTOs;
 using BusinessLayer.Interfaces;
 using DataAccessLayer.DBContext;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +33,8 @@ namespace BusinessLayer.Implementations
                     ShiftStartTime = x.ShiftStartTime.ToTimeSpan(),
                     ShiftEndTime = x.ShiftEndTime.ToTimeSpan(),
                     GraceTime = x.GraceTime,
-                    IsActive = x.IsActive,
+                  OvertimeAllowed = x.OvertimeAllowed,
+                  IsActive = x.IsActive,
                     CompanyID = x.CompanyId,
                     RegionID = x.RegionId,
                     CreatedAt = x.CreatedAt,
@@ -72,6 +73,7 @@ namespace BusinessLayer.Implementations
                 ShiftStartTime = TimeOnly.FromTimeSpan(dto.ShiftStartTime),
                 ShiftEndTime = TimeOnly.FromTimeSpan(dto.ShiftEndTime),
                 GraceTime = dto.GraceTime,
+                OvertimeAllowed = dto.OvertimeAllowed, 
                 CompanyId = dto.CompanyID,
                 RegionId = dto.RegionID,
                 IsActive = true,
@@ -92,7 +94,9 @@ namespace BusinessLayer.Implementations
             entity.ShiftStartTime = TimeOnly.FromTimeSpan(dto.ShiftStartTime);
             entity.ShiftEndTime = TimeOnly.FromTimeSpan(dto.ShiftEndTime);
             entity.GraceTime = dto.GraceTime;
-            entity.ModifiedAt = DateTime.Now;
+            entity.OvertimeAllowed = dto.OvertimeAllowed;  // ✅ ADD
+
+      entity.ModifiedAt = DateTime.Now;
             entity.ModifiedBy = dto.ModifiedBy;
 
             return await _context.SaveChangesAsync() > 0;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,9 @@ namespace BusinessLayer.DTOs
         public TimeSpan ShiftStartTime { get; set; }
         public TimeSpan ShiftEndTime { get; set; }
         public int? GraceTime { get; set; }
-        public bool IsActive { get; set; }
+        public bool OvertimeAllowed { get; set; }   // ✅ ADD THIS
+
+    public bool IsActive { get; set; }
         public int CompanyID { get; set; }
         public int RegionID { get; set; }
         public DateTime CreatedAt { get; set; }
