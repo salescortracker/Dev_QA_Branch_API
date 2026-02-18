@@ -17,8 +17,10 @@ namespace HRMS_Backend.Controllers
         private readonly IEmployeeMasterService _employeeService;
         private readonly ICertificationTypeService _certificationTypeService;
         private readonly ILeaveTypeService _leaveTypeService;
-        private readonly IExpenseCategoryService _expensecategoryservice; private readonly IAssetStatusService _assetStatusService;
-        public MasterDataController(IExpenseCategoryService expenseCategoryservice,IDepartmentService service, IDesignationService designationService, IGenderService genderService,IadminService adminService, ILeaveTypeService leaveTypeService,  ILogger<MasterDataController> logger, IKpiCategoryService kpiCategoryService, IEmployeeMasterService employeeService, ICertificationTypeService certificationTypeService, IAssetStatusService assetStatusService)
+        private readonly IExpenseCategoryService _expensecategoryservice;
+        private readonly IAssetStatusService _assetStatusService;
+        private readonly IModeOfStudyService _modeOfStudyService;
+        public MasterDataController(IExpenseCategoryService expenseCategoryservice,IDepartmentService service, IDesignationService designationService, IGenderService genderService,IadminService adminService, ILeaveTypeService leaveTypeService,  ILogger<MasterDataController> logger, IKpiCategoryService kpiCategoryService, IEmployeeMasterService employeeService, ICertificationTypeService certificationTypeService, IAssetStatusService assetStatusService, IModeOfStudyService modeOfStudyService)
         {
             _service = service;
             _designationService = designationService;
@@ -31,6 +33,7 @@ namespace HRMS_Backend.Controllers
             _employeeService = employeeService;
             _certificationTypeService = certificationTypeService;
             _assetStatusService = assetStatusService;
+            _modeOfStudyService = modeOfStudyService;
         }
         #region Departments
         // ✅ GET ALL (with optional filters later)
@@ -416,7 +419,49 @@ namespace HRMS_Backend.Controllers
             return result.Success ? Ok(result) : NotFound(result);
         }
         #endregion
-        
+
+
+        #region ModeOfStudy
+        [HttpGet("GetAllModeOfStudy")]
+        public async Task<IActionResult> GetAllModeOfStudy([FromQuery] int userId)
+        {
+            var data = await _modeOfStudyService.GetAllModeOfStudtAsync(userId);
+            return Ok(data);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetModeOfStudy(int id)
+        {
+            var data = await _modeOfStudyService.GetByIdModeOfStudtAsync(id);
+            if (data == null) return NotFound();
+            return Ok(data);
+        }
+
+        [HttpPost("CreateModeOfStudy")]
+        public async Task<IActionResult> CreateModeOfStudy([FromBody]ModeOfStudyDto dto)
+        {
+            var result = await _modeOfStudyService.CreateModeOfStudtAsync(dto);
+            //return result ? Ok("Created Successfully") : BadRequest();
+            return result
+    ? Ok(new { success = true, message = "Created Successfully" })
+    : BadRequest(new { success = false, message = "Creation Failed" });
+        }
+
+        [HttpPut("UpdateModeOfStudy")]
+        public async Task<IActionResult> UpdateModeOfStudy([FromBody] ModeOfStudyDto dto)
+        {
+            var result = await _modeOfStudyService.UpdateModeOfStudtAsync(dto);
+            return result ? Ok("Updated Successfully") : NotFound();
+        }
+
+        [HttpDelete("DeleteModeOfStudy/{id}")]
+        public async Task<IActionResult> DeleteModeOfStudy(int id)
+        {
+            var result = await _modeOfStudyService.DeleteModeOfStudtAsync(id);
+            return result ? Ok("Deleted Successfully") : NotFound();
+        }
+        #endregion
+
         //---------------------------------Employee Master Details---------------------------------//
         #region Employee Master Details
 
