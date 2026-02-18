@@ -20,6 +20,10 @@ public partial class ModeOfStudy
     public int? ModifiedBy { get; set; }
 
     public DateTime? ModifiedAt { get; set; }
+    public int CompanyId { get; set; }
+    public int RegionId { get; set; }
+    public int UserId { get; set; }
+    
 
     public virtual ICollection<EmployeeEducation> EmployeeEducations { get; set; } = new List<EmployeeEducation>();
 }
